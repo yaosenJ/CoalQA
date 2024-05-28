@@ -1,23 +1,26 @@
-# 实践教程（InternStudio 版）
+# internlm2微调
 
 ## 环境配置
 
 ```shell
-conda create -n llama3 python=3.10
-conda activate llama3
+conda create -n internlm2 python=3.10
+conda activate internlm2
 conda install pytorch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 pytorch-cuda=12.1 -c pytorch -c nvidia
 ```
+##  下载本项目仓库
+
+```shell
+git clone https://github.com/yaosenJ/CoalQA.git
+```
+
 
 ## 下载模型
 
-新建文件夹
+进入model
 
 ```shell
-mkdir -p ~/model
-cd ~/model
+cd CoalQA/model
 ```
-<details>
-  <summary style="font-weight: bold; font-size: larger;">从OpenXLab中获取权重（开发机中不需要使用此步）</summary>
 
 安装 git-lfs 依赖
 
@@ -26,19 +29,14 @@ cd ~/model
 conda install git-lfs
 git-lfs install
 ```
-下载模型 （InternStudio 中不建议执行这一步）
+
+下载internlm2-chat-1_8b
 ```shell
 
-git clone https://code.openxlab.org.cn/MrCat/Llama-3-8B-Instruct.git Meta-Llama-3-8B-Instruct
 ```
 
-</details>
 
-或者软链接 InternStudio 中的模型
 
-```shell
-ln -s /root/share/new_models/meta-llama/Meta-Llama-3-8B-Instruct ~/model/Meta-Llama-3-8B-Instruct
-```
 
 ## Web Demo 部署
 
