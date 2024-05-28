@@ -24,11 +24,11 @@ from xtuner.utils import PROMPT_TEMPLATE, SYSTEM_TEMPLATE
 #                          PART 1  Settings                           #
 #######################################################################
 # Model
-pretrained_model_name_or_path = '/root/ft/model/internlm2-math-7b'
+pretrained_model_name_or_path = '../model/internlm2-chat-7b'
 use_varlen_attn = False
 
 # Data
-alpaca_en_path = '/root/ft/data/Coal_mine_safety_data.json'
+alpaca_en_path = '../data/Coal_mine_safety_data.json'
 prompt_template = PROMPT_TEMPLATE.internlm2_chat
 max_length = 2048
 pack_to_max_length = True
