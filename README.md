@@ -3,7 +3,8 @@
     <img src="https://github.com/yaosenJ/CoalQA/blob/main/imgs/coal_mine_safety.png?raw=true" width="400" height="120"/>
     <br>
 </p>
-#煤矿安全大模型————研途智护者
+
+# 煤矿安全大模型————研途智护者
 
 **本项目简介：**
 
