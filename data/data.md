@@ -27,9 +27,10 @@ python Generate_QAdata.py  CoalQA_data.json
 ```shell
 python format_internlm2.py  
 ```
-```shell
+
 ## 从整理好题库生成InternLM2模型训练数据格式
 
+```shell
 [
     {
         "conversation": [
