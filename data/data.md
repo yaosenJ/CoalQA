@@ -5,7 +5,6 @@
 生成问答对QA_pair格式
 
 ```shell
-QA_pair:
 [
   {
     "input": "请提供新建矿井立井井筒冻结法施工的具体要求。",
@@ -53,9 +52,9 @@ python Generate_Question_bank.py
 
 
 ### 补充细节
->1.合并两个json文件的脚本：merge_json.py
+>>1.合并两个json文件的脚本：merge_json.py
 
->2.格式化json文本的脚本：format_json.py
+>>2.格式化json文本的脚本：format_json.py
 
->3.打乱json中数据顺序的脚本：shuffle.py
+>>3.打乱json中数据顺序的脚本：shuffle.py
 
