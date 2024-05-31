@@ -1,93 +1,48 @@
-# 实践教程（InternStudio 版）
+# 数据构建
 
-## 环境配置
-
-```shell
-conda create -n llama3 python=3.10
-conda activate llama3
-conda install pytorch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 pytorch-cuda=12.1 -c pytorch -c nvidia
-```
-
-## 下载模型
-
-新建文件夹
-
-```shell
-mkdir -p ~/model
-cd ~/model
-```
-<details>
-  <summary style="font-weight: bold; font-size: larger;">从OpenXLab中获取权重（开发机中不需要使用此步）</summary>
-
-安装 git-lfs 依赖
-
-```shell
-# 如果下面命令报错则使用 apt install git git-lfs -y
-conda install git-lfs
-git-lfs install
-```
-下载模型 （InternStudio 中不建议执行这一步）
-```shell
-
-git clone https://code.openxlab.org.cn/MrCat/Llama-3-8B-Instruct.git Meta-Llama-3-8B-Instruct
-```
-
-</details>
-
-或者软链接 InternStudio 中的模型
-
-```shell
-ln -s /root/share/new_models/meta-llama/Meta-Llama-3-8B-Instruct ~/model/Meta-Llama-3-8B-Instruct
-```
-
-## Web Demo 部署
-
-```shell
-cd ~
-git clone https://github.com/SmartFlowAI/Llama3-Tutorial
-```
-
-安装 XTuner 时会自动安装其他依赖
-```shell
-cd ~
-git clone -b v0.1.18 https://github.com/InternLM/XTuner
-cd XTuner
-pip install -e .
-```
-
-运行 web_demo.py
-
-```shell
-streamlit run ~/Llama3-Tutorial/tools/internstudio_web_demo.py \
-  ~/model/Meta-Llama-3-8B-Instruct
-```
-
-![image](https://github.com/SmartFlowAI/Llama3-Tutorial/assets/25839884/30ab70ea-9e60-4fed-a685-b3b3edbce7e6)
-
-### 可能遇到的问题
-
-<details>
-
-  <summary>本地访问远程服务器streamlit web失败 （远程端口未转发至本地）</summary>
-
-  <hr>
-
-  ![image](https://github.com/kv-chiu/Llama3-Tutorial/assets/132759132/a29291cf-a36b-4bef-9a45-4a5129e0a349)
-
-  ![image](https://github.com/kv-chiu/Llama3-Tutorial/assets/132759132/48655004-b39a-41a7-898b-df64ffa23568)
+## 从规程规章制度等文档生成InternLM2模型训练数据格式
+生成问答对QA_pair格式
+QA_pair:
+[
+  {
+    "input": "请提供新建矿井立井井筒冻结法施工的具体要求。",
+    "output": "新建矿井立井井筒冻结法施工需要遵守以下要求：冻结深度必须穿过风化带延深至稳定的基岩10m以上，第一个冻结孔必须全孔取芯，钻孔时必须测定钻孔的方向和偏斜度，偏斜度超过规定时必须及时纠正，冻结管必须采用无缝钢管并焊接或螺纹连接，开始冻结后必须经常观察水文观测孔的水位变化，并在确定冻结壁已交圈后才能进行试挖。"
+  },
+  ...
   
-  如图所示，远程服务器中streamlit web demo启动正常，但本地访问web时提示链接超时，首先可以检查是否进行了端口转发
-  
-  参考[vscode端口转发指南](https://code.visualstudio.com/docs/remote/ssh#_forwarding-a-port-creating-ssh-tunnel)
-  
-  ![image](https://github.com/kv-chiu/Llama3-Tutorial/assets/132759132/b7f8c35e-354d-4b7d-939d-6e3af2884298)
-  
-  配置成功后，打开localhost+转发端口，问题得到解决
-  
-  ![image](https://github.com/kv-chiu/Llama3-Tutorial/assets/132759132/88d70763-14b8-4131-a6bb-31d8a7d63c02)
-  
-  ![image](https://github.com/kv-chiu/Llama3-Tutorial/assets/132759132/84648552-700f-43f1-96c4-9487566dcc3b)
+]
 
-  <hr>
-  
-</details>
+通过如下命令，在当前目录生成CoalQA_data.json
+```shell
+python Generate_QAdata.py  CoalQA_data.json
+```
+接上面生成json，处理成InternLM2可训练数据格式，运行下面命令即可
+```shell
+python format_internlm2.py  
+```
+## 从整理好题库生成InternLM2模型训练数据格式
+[
+    {
+        "conversation": [
+            {
+            
+                "system": "你是一个煤矿安全领域的知识达人，你会解答很多题。用户给出一个单选题，你能从几个选项中，选择出一个正确选项。",
+                "input": "关于《安全生产法》的立法目的，下列表述中不准确的是( ) A.加强安全生产工作  C.保障人民群众生命和财产安全  B.防止和减少生产安全事故 D.提升经济发展速度",
+                "output": "D"
+                
+            }
+        ]
+    },
+    ...
+]
+
+```shell
+python Generate_Question_bank.py
+```
+
+
+### 补充细节
+1.合并两个json文件的脚本：merge_json.py
+2.格式化json文本的脚本：format_json.py
+3.打乱json中数据顺序的脚本：shuffle.py
+
