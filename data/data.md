@@ -1,7 +1,10 @@
 # 数据构建
 
 ## 从规程规章制度等文档生成InternLM2模型训练数据格式
+
 生成问答对QA_pair格式
+
+```shell
 QA_pair:
 [
   {
@@ -11,16 +14,22 @@ QA_pair:
   ...
   
 ]
+```
 
 通过如下命令，在当前目录生成CoalQA_data.json
+
 ```shell
 python Generate_QAdata.py  CoalQA_data.json
 ```
+
 接上面生成json，处理成InternLM2可训练数据格式，运行下面命令即可
+
 ```shell
 python format_internlm2.py  
 ```
+```shell
 ## 从整理好题库生成InternLM2模型训练数据格式
+
 [
     {
         "conversation": [
@@ -35,6 +44,7 @@ python format_internlm2.py
     },
     ...
 ]
+```
 
 ```shell
 python Generate_Question_bank.py
@@ -42,7 +52,9 @@ python Generate_Question_bank.py
 
 
 ### 补充细节
-1.合并两个json文件的脚本：merge_json.py
-2.格式化json文本的脚本：format_json.py
-3.打乱json中数据顺序的脚本：shuffle.py
+>1.合并两个json文件的脚本：merge_json.py
+
+>2.格式化json文本的脚本：format_json.py
+
+>3.打乱json中数据顺序的脚本：shuffle.py
 
