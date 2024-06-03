@@ -1,6 +1,6 @@
 <p align="center">
     <br>
-    <img src="https://github.com/yaosenJ/CoalQA/blob/main/imgs/coal_mine_safety.png?raw=true" width="600" height="400"/>
+    <img src="https://github.com/yaosenJ/CoalQA/blob/main/imgs/coal_mine_safety.png?raw=true" width="500" height="400"/>
     <br>
 </p>
 
@@ -12,6 +12,7 @@
 
 **本项目的特点如下：**
 
-- 支持煤矿安全领域常规题型解答，如：单选题、多选题、判断题、填空题等 （针对煤矿主要负责人及安管人员、煤矿特种作业人员）
-- 支持针对安全规程规章制度、技术等文档内容回答
+- 支持煤矿安全领域常规题型解答，如：单选题、多选题、判断题、填空题等 （针对煤矿主要负责人及安管人员、煤矿各种作业人员）
+- 支持针对安全规程规章制度、技术等文档内容回答（如《中华人民共和国矿山安全法》、《煤矿建设安全规程》）
 - 支持煤矿历史事故案例，事故处理报告查询，提供事故原因详细分析、事故预防措施以及应急响应知识
+
