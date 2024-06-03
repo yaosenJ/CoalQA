@@ -13,7 +13,7 @@ from transformers.generation.utils import (LogitsProcessorList,
 from transformers.utils import logging
 
 from transformers import AutoTokenizer, AutoModelForCausalLM  # isort: skip
-
+from rag.main import setup_model_and_tokenizer
 logger = logging.get_logger(__name__)
 
 
@@ -162,19 +162,20 @@ def generate_interactive(
 def on_btn_click():
     del st.session_state.messages
 
-
 @st.cache_resource
-def load_model():
+def load_model(): 
     base_path = r'/group_share/internlm2_chat_7b_qlora_4000'
     if not os.path.exists(base_path):
         os.system(f'git clone https://code.openxlab.org.cn/milowang/selfassi_kw.git {base_path}')
         os.system(f'cd {base_path} && git lfs pull')
-    model = (AutoModelForCausalLM.from_pretrained(base_path,
-                                                  trust_remote_code=True).to(
-                                                      torch.bfloat16).cuda())
-    tokenizer = AutoTokenizer.from_pretrained(base_path,
-                                              trust_remote_code=True)
-    return model, tokenizer
+    generation_config = GenerationConfig(max_length=512)
+    model, tokenizer, llm = setup_model_and_tokenizer(base_path, generation_config)
+    # model = (AutoModelForCausalLM.from_pretrained(base_path,
+    #                                               trust_remote_code=True).to(
+    #                                                   torch.bfloat16).cuda())
+    # tokenizer = AutoTokenizer.from_pretrained(base_path,
+    #                                           trust_remote_code=True)
+    return model, tokenizer, llm
 
 
 def prepare_generation_config():
@@ -200,9 +201,10 @@ cur_query_prompt = '<|im_start|>user\n{user}<|im_end|>\n\
     <|im_start|>assistant\n'
 
 
-def combine_history(prompt):
+def combine_history(prompt, retrieval_content=''):
     messages = st.session_state.messages
-    meta_instruction = ('')
+    prompt = f"你需要根据以下检索到的专业知识:`{retrieval_content}`。从一个煤矿安全专家的专业角度来回答后续提问：{prompt}"
+    meta_instruction = ('你是一个由aJupyter、Farewell、jujimeizuo、Smiling&Weeping研发（排名按字母顺序排序，不分先后）、散步提供技术支持、上海人工智能实验室提供支持开发的煤矿安全专家大模型。现在你是一个煤矿安全专家，我有一些煤矿安全方面的问题，请你用专业的知识帮我解决。')
     total_prompt = f"<s><|im_start|>system\n{meta_instruction}<|im_end|>\n"
     for message in messages:
         cur_content = message['content']
@@ -222,6 +224,9 @@ def main():
     print('load model begin.')
     model, tokenizer = load_model()
     print('load model end.')
+    
+    model, tokenizer, llm = setup_model_and_tokenizer(args.model_name_or_path, generation_config)
+    rag_obj = CoalLLMRAG(llm)
 
 
     st.title('💬 coal QA')
@@ -240,9 +245,10 @@ def main():
     # Accept user input
     if prompt := st.chat_input('What is up?'):
         # Display user message in chat message container
+        retrieval_content = rag_obj.get_retrieval_content(query)
         with st.chat_message('user'):
             st.markdown(prompt)
-        real_prompt = combine_history(prompt)
+        real_prompt = combine_history(prompt, retrieval_content)
         # Add user message to chat history
         st.session_state.messages.append({
             'role': 'user',
