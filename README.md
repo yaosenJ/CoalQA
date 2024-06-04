@@ -30,7 +30,13 @@
     <img src="https://github.com/yaosenJ/CoalQA/blob/main/imgs/%E6%9E%B6%E6%9E%84%E5%9B%BE.png?raw=true" width="920" height="400"/>
     <br>
     <br>
-    <img src="https://github.com/yaosenJ/CoalQA/blob/main/imgs/%E6%9E%B6%E6%9E%84%E5%9B%BE.png?raw=true" width="920" height="400"/>
+    <img src="https://github.com/yaosenJ/CoalQA/blob/main/imgs/RAG.png?raw=true" width="920" height="400"/>
     <br>
 </p>
 
+## 📬 NEWS
+
+- \[**2023/06/03**\] 发布CoalMineLLM_InternLM2-Chat-20B模型到OpenXLab。
+- \[**2023/06/01**\] 发布CoalMineLLM_InternLM2-Chat-1_8B、CoalMineLLM_InternLM2-Math-7B模型到OpenXLab。
+- \[**2024/05/31**\] 发布CoalMineLLM_InternLM2-Chat-7B模型到OpenXLab。
+- \[**2024/05/22**\] 我们启动了煤矿安全领域的大模型项目。
