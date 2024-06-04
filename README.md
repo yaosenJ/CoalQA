@@ -37,8 +37,8 @@
 
 ## 📬 NEWS
 
-- \[**2023/06/03**\] 发布CoalMineLLM_InternLM2-Chat-20B模型到OpenXLab。
-- \[**2023/06/01**\] 发布CoalMineLLM_InternLM2-Chat-1_8B、CoalMineLLM_InternLM2-Math-7B模型到OpenXLab。
+- \[**2024/06/03**\] 发布CoalMineLLM_InternLM2-Chat-20B模型到OpenXLab。
+- \[**2024/06/01**\] 发布CoalMineLLM_InternLM2-Chat-1_8B、CoalMineLLM_InternLM2-Math-7B模型到OpenXLab。
 - \[**2024/05/31**\] 发布CoalMineLLM_InternLM2-Chat-7B模型到OpenXLab。
 - \[**2024/05/22**\] 我们启动了煤矿安全领域的大模型项目。
 
