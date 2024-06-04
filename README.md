@@ -42,7 +42,7 @@
 - \[**2024/05/31**\] 发布CoalMineLLM_InternLM2-Chat-7B模型到OpenXLab。
 - \[**2024/05/22**\] 我们启动了煤矿安全领域的大模型项目。
 
-<h2 id="1">🚴快速开始</h2>
+<h2 id="1">🚴 快速使用</h2>
 
 <h3 id="1-1">🛠️ 环境配置</h3>
 
@@ -54,3 +54,17 @@ conda activate knowlm
 pip install torch==1.13.1+cu116 --extra-index-url https://download.pytorch.org/whl/cu116
 pip install -r requirements.txt
 ```
+
+<h3 id="7-3">💡 致谢</h3>
+
+我们非常感谢以下这些开源项目给予我们的帮助：
+
+- [InternLM](https://github.com/InternLM/InternLM)
+
+- [Xtuner](https://github.com/InternLM/xtuner)
+
+- [Imdeploy](https://github.com/InternLM/lmdeploy)
+
+- [InternlM-Tutorial](https://github.com/InternLM/Tutorial)
+  
+最后感谢上海人工智能实验室推出的书生·浦语大模型实战营，为我们的项目提供宝贵的技术指导和强大的算力支持！
