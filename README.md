@@ -41,3 +41,16 @@
 - \[**2023/06/01**\] 发布CoalMineLLM_InternLM2-Chat-1_8B、CoalMineLLM_InternLM2-Math-7B模型到OpenXLab。
 - \[**2024/05/31**\] 发布CoalMineLLM_InternLM2-Chat-7B模型到OpenXLab。
 - \[**2024/05/22**\] 我们启动了煤矿安全领域的大模型项目。
+
+<h2 id="1">🚴快速开始</h2>
+
+<h3 id="1-1">🛠️ 环境配置</h3>
+
+```shell
+git clone https://github.com/yaosenJ/CoalQA.git
+cd KnowLM
+conda create -n knowlm python=3.9 -y
+conda activate knowlm
+pip install torch==1.13.1+cu116 --extra-index-url https://download.pytorch.org/whl/cu116
+pip install -r requirements.txt
+```
