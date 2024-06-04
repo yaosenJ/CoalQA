@@ -48,9 +48,9 @@
 
 ```shell
 git clone https://github.com/yaosenJ/CoalQA.git
-cd KnowLM
-conda create -n knowlm python=3.9 -y
-conda activate knowlm
+cd CoalQA
+conda create -n CoalQA python=3.9 -y
+conda activate CoalQA
 pip install torch==1.13.1+cu116 --extra-index-url https://download.pytorch.org/whl/cu116
 pip install -r requirements.txt
 ```
