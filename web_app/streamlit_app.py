@@ -231,9 +231,10 @@ def main():
             "Whether use RAG for generate",
             ("Yes", "No")
         )
+        st.image(r"images/coal_mine_safety.png")
 
     st.title('💬 Coal QA')
-    st.image(r"images/coal_mine_safety.png")
+    
 
     generation_config = prepare_generation_config()
 
