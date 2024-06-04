@@ -24,3 +24,9 @@
 | 对话模型 | InternLM2-Math-7B  |CoalMineLLM_InternLM2-Math-7B      | V1.0 | [OpenXLab](https://openxlab.org.cn/models/detail/viper/CoalMineLLM_InternLM2-Math-7B)|QLora|
 | 对话模型 | InternLM2-Chat-20B |CoalMineLLM_InternLM2-Chat-20B     | V1.0 | [OpenXLab](https://openxlab.org.cn/models/detail/viper/CoalMineLLM_InternLM2-Chat-20B)|QLora|
 
+## 📍 架构图
+<p align="center">
+    <br>
+    <img src="?raw=true" width="920" height="400"/>
+    <br>
+</p>
