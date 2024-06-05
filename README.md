@@ -49,9 +49,9 @@
 ```shell
 git clone https://github.com/yaosenJ/CoalQA.git
 cd CoalQA/web_app
-conda create -n CoalQA python=3.9 -y
+conda create -n CoalQA python=3.10.0 -y
 conda activate CoalQA
-pip install torch==1.13.1+cu116 --extra-index-url https://download.pytorch.org/whl/cu116
+conda install pytorch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 pytorch-cuda=12.1 -c pytorch -c nvidia
 pip install -r requirements.txt
 streamlit run streamlit_app.py --server.address=127.0.0.1 --server.port 6006
 ```
