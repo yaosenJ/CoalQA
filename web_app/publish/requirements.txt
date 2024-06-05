@@ -1,0 +1,4 @@
+transformers>=4.34
+einops
+streamlit
+sentencepiece
