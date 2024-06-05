@@ -36,7 +36,7 @@
 </p>
 
 ## 📬 NEWS
-
+- \[**2024/06/05**\] CoalMineLLM_InternLM2-Chat-1_8V1.0版已部署上线[https://openxlab.org.cn/apps/detail/milowang/CoalQAv1](https://openxlab.org.cn/apps/detail/milowang/CoalQAv1)。
 - \[**2024/06/03**\] 发布CoalMineLLM_InternLM2-Chat-20B模型到OpenXLab。
 - \[**2024/06/01**\] 发布CoalMineLLM_InternLM2-Chat-1_8B、CoalMineLLM_InternLM2-Math-7B模型到OpenXLab。
 - \[**2024/05/31**\] 发布CoalMineLLM_InternLM2-Chat-7B模型到OpenXLab。
