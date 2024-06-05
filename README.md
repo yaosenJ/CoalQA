@@ -66,7 +66,8 @@ CoalMineLLM_InternLM2-Chat-1_8版体验地址：[https://openxlab.org.cn/apps/de
 <h3 id="2-3"> 模型微调 </h3>
 <h3 id="2-4"> RAG </h3>
 <h3 id="2-5"> 部署 </h3>
-<h3 id="3">💡 致谢</h3>
+
+<h2 id="3">💡 致谢</h2>
 
 我们非常感谢以下这些开源项目给予我们的帮助：
 
