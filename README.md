@@ -28,7 +28,7 @@
 
 <p align="center">
     <br>
-    <img src="https://github.com/yaosenJ/CoalQA/blob/main/imgs/%E6%9E%B6%E6%9E%84%E5%9B%BE.png?raw=true" width="920" height="400"/>
+    <img src="https://github.com/yaosenJ/CoalQA/blob/main/imgs/%E6%9E%B6%E6%9E%84%E5%9B%BE3.png?raw=true" width="920" height="400"/>
     <br>
     <br>
     <img src="https://github.com/yaosenJ/CoalQA/blob/main/imgs/RAG.png?raw=true" width="920" height="400"/>
