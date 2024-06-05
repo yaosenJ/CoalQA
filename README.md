@@ -62,6 +62,7 @@ CoalMineLLM_InternLM2-Chat-1_8版体验地址：[https://openxlab.org.cn/apps/de
 <h2 id="2"> 详细指南 </h2>
 
 <h3 id="2-1"> 环境配置 </h3>
+
 ```shell
 git clone https://github.com/yaosenJ/CoalQA.git
 conda create -n CoalQA python=3.10.0 -y
@@ -69,8 +70,11 @@ conda activate CoalQA
 conda install pytorch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 pytorch-cuda=12.1 -c pytorch -c nvidia
 pip install -r requirements.txt
 ```
+
 <h3 id="2-2"> 数据构造 </h3>
+
 -请查看[数据构造指南](https://github.com/yaosenJ/CoalQA/tree/main/data#readme)
+
 -相关数据请见[Coal/data](https://github.com/yaosenJ/CoalQA/tree/main/data)
 <h3 id="2-3"> 模型微调 </h3>
 <h3 id="2-4"> RAG </h3>
