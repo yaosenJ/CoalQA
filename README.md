@@ -53,7 +53,7 @@ conda create -n CoalQA python=3.9 -y
 conda activate CoalQA
 pip install torch==1.13.1+cu116 --extra-index-url https://download.pytorch.org/whl/cu116
 pip install -r requirements.txt
-streamlit run app.py --server.adress=0.0.0.0 --server.port 7860
+streamlit run streamlit_app.py --server.address=127.0.0.1 --server.port 6006
 ```
 <h3 id="1-2">在线体验 </h3>
 
