@@ -171,6 +171,7 @@ def load_model():
         os.system('apt install git-lfs')
         #os.system(f'git clone https://code.openxlab.org.cn/viper/CoalMineLLM_InternLM2-Chat-1_8B.git {base_path}')
         os.system(f'git clone https://code.openxlab.org.cn/viper/CoalMineLLM_InternLM2-Chat-1_8B.git {base_path}')
+        #os.system(f'git clone https://code.openxlab.org.cn/milowang/CoalMineLLM_InternLM2-Chat-7B-4bit.git {base_path}')
         os.system(f'cd {base_path} && git lfs pull')
 
     model = (AutoModelForCausalLM.from_pretrained(base_path,
