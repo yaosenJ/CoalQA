@@ -83,6 +83,14 @@ pip install -r requirements.txt
 <h3 id="2-5"> 部署 </h3>
 
 <h2 id="3"> 案例展示 </h2>
+<p align="center">
+    <br>
+    <img src="https://github.com/yaosenJ/CoalQA/blob/main/imgs/%E8%87%AA%E6%88%91%E8%AE%A4%E7%9F%A5.png?raw=true" width="920" height="400"/>
+    <br>
+    <br>
+    <img src="https://github.com/yaosenJ/CoalQA/blob/main/imgs/RAG.png?raw=true" width="920" height="400"/>
+    <br>
+</p>
 
 <h2 id="4"> 人员贡献 </h2>
 
