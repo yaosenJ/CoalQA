@@ -88,7 +88,7 @@ pip install -r requirements.txt
     <img src="https://github.com/yaosenJ/CoalQA/blob/main/imgs/%E8%87%AA%E6%88%91%E8%AE%A4%E7%9F%A5.png?raw=true" width="920" height="400"/>
     <br>
     <br>
-    <img src="https://github.com/yaosenJ/CoalQA/blob/main/imgs/RAG.png?raw=true" width="920" height="400"/>
+    <img src="https://github.com/yaosenJ/CoalQA/blob/main/imgs/%E7%AD%94%E9%A2%98.png?raw=true" width="920" height="400"/>
     <br>
 </p>
 
