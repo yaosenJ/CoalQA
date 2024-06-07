@@ -1,6 +1,6 @@
 <p align="center">
     <br>
-    <img src="https://github.com/yaosenJ/CoalQA/blob/main/imgs/coal_mine_safety.png?raw=true" width="500" height="400"/>
+    <img src="https://github.com/yaosenJ/CoalQA/blob/main/imgs/coal_mine_safety.png?raw=true" width="400" height="400"/>
     <br>
 </p>
 
