@@ -3,7 +3,7 @@ import os
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, AutoModel
 
-base_path = './CoalMineLLM_InternLM2-Chat-1_8B'
+base_path = '../model/CoalMineLLM_InternLM2-Chat-1_8B'
 os.system(f'git clone https://code.openxlab.org.cn/viper/CoalMineLLM_InternLM2-Chat-1_8B.git {base_path}')
 os.system(f'cd {base_path} && git lfs pull')
 
