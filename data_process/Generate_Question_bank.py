@@ -4,7 +4,7 @@ import json
 
 
 csv_filename = '../data/多选题.csv'
-json_filename = '../data/mo.json'
+json_filename = '../data/multiple_choice.json'
 
 # 读取CSV文件并转换为JSON格式
 conversations_list = []
