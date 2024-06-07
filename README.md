@@ -79,8 +79,9 @@ pip install -r requirements.txt
 - 请查看[数据构造指南](https://github.com/yaosenJ/CoalQA/tree/main/data_process#readme)
 
 - 相关数据请见[CoalQA/data](https://github.com/yaosenJ/CoalQA/tree/main/data)
-- 
+
 <h3 id="2-3"> 模型微调 </h3>
+
 - 详细查看模型微调，请查阅[模型微调指南](https://github.com/yaosenJ/CoalQA/blob/main/finetune/README.md)
 
 <h3 id="2-4"> RAG </h3>
