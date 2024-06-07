@@ -24,7 +24,7 @@ for i in range(n):
     data.append(data[0])
 
 # 将data列表中的数据写入到一个名为'personal_assistant.json'的文件中
-with open('煤矿安全数据/personal_assistant.json', 'w', encoding='utf-8') as f:
+with open('../data/personal_assistant.json', 'w', encoding='utf-8') as f:
     # 使用json.dump方法将数据以JSON格式写入文件
     # ensure_ascii=False 确保中文字符正常显示
     # indent=4 使得文件内容格式化，便于阅读
