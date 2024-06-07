@@ -112,6 +112,10 @@ pip install -r requirements.txt
 
 [qzd-1](https://github.com/qzd-1): 负责RAG
 
+[Volta-lemon](https://github.com/Volta-lemon): 负责模型微调、测试
+
+[Hao813](https://github.com/Hao813): 负责数据收集、架构图绘制
+
 
 <h2 id="5">💡 致谢</h2>
 
