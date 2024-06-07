@@ -1,0 +1,13 @@
+FlagEmbedding==1.2.10
+langchain==0.2.3
+langchain_community==0.2.4
+langchain_core==0.2.5
+langchain_text_splitters==0.2.1
+loguru==0.7.2
+modelscope==1.15.0
+numpy==1.26.4
+pandas==2.2.2
+streamlit==1.35.0
+textract==1.6.5
+torch==2.3.0
+transformers==4.40.2
