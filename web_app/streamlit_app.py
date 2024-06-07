@@ -165,9 +165,11 @@ def on_btn_click():
 
 @st.cache_resource
 def load_model():
-    base_path = r'/group_share/internlm2_chat_7b_qlora_4000'
+    base_path = r'../model/CoalMineLLM_InternLM2-Chat-7B'
     if not os.path.exists(base_path):
-        os.system(f'git clone https://code.openxlab.org.cn/milowang/selfassi_kw.git {base_path}')
+        os.system('apt install git')
+        os.system('apt install git-lfs')
+        os.system(f'git clone https://code.openxlab.org.cn/viper/CoalMineLLM_InternLM2-Chat-7B.git {base_path}')
         os.system(f'cd {base_path} && git lfs pull')
     model = (AutoModelForCausalLM.from_pretrained(base_path,
                                                   trust_remote_code=True).to(
@@ -225,7 +227,7 @@ def main():
     print('load model begin.')
     model, tokenizer = load_model()
     print('load model end.')
-
+    robot_avator = "./images/robot.jpg"
     with st.sidebar:
         is_arg = st.radio(
             "Whether use RAG for generate",
@@ -233,7 +235,7 @@ def main():
         )
         st.image(r"images/coal_mine_safety.png")
 
-    st.title('💬 Coal QA')
+    st.title('💬 煤矿安全大模型--矿途智护者')
     
 
     generation_config = prepare_generation_config()
@@ -256,7 +258,6 @@ def main():
         # add rag function
         if is_arg=="Yes":
             prompt = use_rag(prompt)
-        prompt = "你是一个煤矿安全领域知识达人，你对相关煤矿安全规程制度、技术等文档非常熟悉。请你专业正确地理解用户想问的煤矿安全相关问题。\n"+prompt
         real_prompt = combine_history(prompt)
         # Add user message to chat history
         st.session_state.messages.append({
@@ -280,6 +281,7 @@ def main():
         st.session_state.messages.append({
             'role': 'robot',
             'content': cur_response,  # pylint: disable=undefined-loop-variable
+            "avatar": robot_avator,
         })
         torch.cuda.empty_cache()
 
