@@ -1,6 +1,6 @@
 # 1. 直接使用pytorch原生加载streamlit应用
 
-    ```shell
+ ```shell
     git clone https://github.com/yaosenJ/CoalQA.git
     cd CoalQA
     conda create -n CoalQA python=3.10.0 -y
@@ -9,5 +9,5 @@
     pip install -r requirements.txt
     cd web_app
     streamlit run streamlit_app.py --server.address=127.0.0.1 --server.port 6006
-    ```
+ ```
 
