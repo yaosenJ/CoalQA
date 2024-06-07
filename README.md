@@ -107,6 +107,7 @@ pip install -r requirements.txt
 <h2 id="4"> 人员贡献 </h2>
 
 [yaosenJ](https://github.com/yaosenJ): 项目发起人，负责数据构造、模型微调、文档整理
+
 [kaiwang0112006](https://github.com/kaiwang0112006): 负责数据构造、模型部署、测试
 
 
