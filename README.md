@@ -100,12 +100,12 @@ pip install -r requirements.txt
     <img src="https://github.com/yaosenJ/CoalQA/blob/main/imgs/%E7%AD%94%E9%A2%98.png?raw=true" width="800" height="400"/>
     <br>
     <br>
-    <img src="https://github.com/yaosenJ/CoalQA/blob/main/imgs/%E7%85%A4%E7%9F%BF%E5%AE%89%E5%85%A8%E7%AD%94%E9%A2%98.png?raw=true" width="800" height="400"/>
+    <img src="https://github.com/yaosenJ/CoalQA/blob/main/imgs/%E7%85%A4%E7%9F%BF%E5%AE%89%E5%85%A8%E7%AD%94%E9%A2%98.png?raw=true" width="800" height="500"/>
     <br>
 </p>
 
 <h2 id="4"> 人员贡献 </h2>
-
+[yaosenJ](https://github.com/yaosenJ):项目发起人，负责数据构造、模型微调、文档整理
 
 <h2 id="5">💡 致谢</h2>
 
