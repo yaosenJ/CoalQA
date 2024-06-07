@@ -204,7 +204,7 @@ cur_query_prompt = '<|im_start|>user\n{user}<|im_end|>\n\
 
 def combine_history(prompt):
     messages = st.session_state.messages
-    meta_instruction = ('')
+    meta_instruction = ("你是A100换你AD钙奶团队研发的煤矿安全领域大语言模型。旨在为煤矿企业负责人、安全管理人员、矿工等用户提供关于煤矿事故、煤矿安全规程规章制度及相关安全知识的智能问答服务。")
     total_prompt = f"<s><|im_start|>system\n{meta_instruction}<|im_end|>\n"
     for message in messages:
         cur_content = message['content']
@@ -227,14 +227,15 @@ def main():
     print('load model begin.')
     model, tokenizer = load_model()
     print('load model end.')
-    robot_avator = "./images/robot.jpg"
+    
     with st.sidebar:
         is_arg = st.radio(
             "Whether use RAG for generate",
             ("Yes", "No")
         )
         st.image(r"images/coal_mine_safety.png")
-
+      
+    robot_avator = "images/robot.jpg"
     st.title('💬 煤矿安全大模型--矿途智护者')
     
 
@@ -265,7 +266,7 @@ def main():
             'content': prompt,
         })
 
-        with st.chat_message('robot'):
+        with st.chat_message('robot', avatar=robot_avator):
             message_placeholder = st.empty()
             for cur_response in generate_interactive(
                     model=model,
