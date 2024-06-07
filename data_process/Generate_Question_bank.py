@@ -2,9 +2,9 @@
 import csv
 import json
 
-# 假设CSV文件的名称是'questions.csv'，且无标题行
-csv_filename = r'C:\Users\jys\OneDrive\桌面\data\多选题.csv'
-json_filename = '煤矿安全数据/多项选择题.json'
+
+csv_filename = '../data/多选题.csv'
+json_filename = '../data/mo.json'
 
 # 读取CSV文件并转换为JSON格式
 conversations_list = []
