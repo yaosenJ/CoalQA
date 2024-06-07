@@ -110,6 +110,8 @@ pip install -r requirements.txt
 
 [kaiwang0112006](https://github.com/kaiwang0112006): 负责数据构造、模型部署、测试
 
+[qzd-1](https://github.com/qzd-1): 负责RAG
+
 
 <h2 id="5">💡 致谢</h2>
 
