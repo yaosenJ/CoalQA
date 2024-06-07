@@ -44,7 +44,7 @@
 
 <h2 id="1">🚴 快速使用 </h2>
 
-<h3 id="1-1">本地部署 </h3>
+<h3 id="1-1">部署说明 </h3>
 
 ```shell
 git clone https://github.com/yaosenJ/CoalQA.git
@@ -56,6 +56,7 @@ pip install -r requirements.txt
 cd web_app
 streamlit run streamlit_app.py --server.address=127.0.0.1 --server.port 6006
 ```
+
 <h3 id="1-2">在线体验 </h3>
 
 CoalMineLLM_InternLM2-Chat-1_8版体验地址：[https://openxlab.org.cn/apps/detail/milowang/CoalQAv1](https://openxlab.org.cn/apps/detail/milowang/CoalQAv1)
@@ -81,6 +82,10 @@ pip install -r requirements.txt
 <h3 id="2-3"> 模型微调 </h3>
 <h3 id="2-4"> RAG </h3>
 <h3 id="2-5"> 部署 </h3>
+
+- 本地部署：详见[本地部署说明](web_app/README.md)
+- openxlab部署：详见[openxlab部署说明](web_app/publish/README.md)
+- 基于[LMDeploy](https://github.com/InternLM/lmdeploy/)的量化部署：详见[deploy](web_app/lmdeploy.md)
 
 <h2 id="3"> 案例展示 </h2>
 <p align="center">
