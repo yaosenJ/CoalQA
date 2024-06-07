@@ -1,9 +1,9 @@
 #coding=utf-8
 import json
 
-# 假设JSON文件的名称是'questions.json'
-input_json_filename = './data/output/data.json'
-output_json_filename = '煤矿安全数据/安全规程制度.json'
+
+input_json_filename = '../data/CoalQA_data.json'
+output_json_filename = '../data/Xtuner_CoalQA_data.json'
 
 # 读取原始JSON文件
 with open(input_json_filename, 'r', encoding='utf-8') as infile:
