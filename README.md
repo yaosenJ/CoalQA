@@ -44,7 +44,7 @@
 
 <h2 id="1">🚴 快速使用 </h2>
 
-<h3 id="1-1">部署说明 </h3>
+<h3 id="1-1">本地Demo部署 </h3>
 
 ```shell
 git clone https://github.com/yaosenJ/CoalQA.git
@@ -79,7 +79,10 @@ pip install -r requirements.txt
 - 请查看[数据构造指南](https://github.com/yaosenJ/CoalQA/tree/main/data_process#readme)
 
 - 相关数据请见[CoalQA/data](https://github.com/yaosenJ/CoalQA/tree/main/data)
+- 
 <h3 id="2-3"> 模型微调 </h3>
+- 详细查看模型微调，请查阅[模型微调指南](https://github.com/yaosenJ/CoalQA/blob/main/finetune/README.md)
+
 <h3 id="2-4"> RAG </h3>
 <h3 id="2-5"> 部署 </h3>
 
@@ -90,10 +93,10 @@ pip install -r requirements.txt
 <h2 id="3"> 案例展示 </h2>
 <p align="center">
     <br>
-    <img src="https://github.com/yaosenJ/CoalQA/blob/main/imgs/%E8%87%AA%E6%88%91%E8%AE%A4%E7%9F%A5.png?raw=true" width="920" height="400"/>
+    <img src="https://github.com/yaosenJ/CoalQA/blob/main/imgs/%E8%87%AA%E6%88%91%E8%AE%A4%E7%9F%A5.png?raw=true" width="800" height="400"/>
     <br>
     <br>
-    <img src="https://github.com/yaosenJ/CoalQA/blob/main/imgs/%E7%AD%94%E9%A2%98.png?raw=true" width="920" height="400"/>
+    <img src="https://github.com/yaosenJ/CoalQA/blob/main/imgs/%E7%AD%94%E9%A2%98.png?raw=true" width="800" height="400"/>
     <br>
 </p>
 
