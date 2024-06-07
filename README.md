@@ -105,7 +105,7 @@ pip install -r requirements.txt
 </p>
 
 <h2 id="4"> 人员贡献 </h2>
-[**yaosenJ**](https://github.com/yaosenJ): 项目发起人，负责数据构造、模型微调、文档整理
+[yaosenJ](https://github.com/yaosenJ): 项目发起人，负责数据构造、模型微调、文档整理
 
 <h2 id="5">💡 致谢</h2>
 
