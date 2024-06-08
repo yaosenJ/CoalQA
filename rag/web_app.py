@@ -257,7 +257,7 @@ def main():
             "Whether use RAG for generate",
             ("Yes", "No")
         )
-    st.image(r"images/coal_mine_safety.png")
+        st.image(r"images/coal_mine_safety.png")
       
     robot_avator = "images/robot.jpg"
     st.title('💬 煤矿安全大模型--矿途智护者')
