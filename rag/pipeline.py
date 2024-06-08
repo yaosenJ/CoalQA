@@ -2,8 +2,8 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import PromptTemplate
 from transformers.utils import logging
 
-from data_generate import Data_process
-from config.config import prompt_template 
+from rag.data_generate import Data_process
+from rag.config.config import prompt_template 
 
 from dataclasses import dataclass
 from typing import Callable, List, Optional
