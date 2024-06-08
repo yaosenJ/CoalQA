@@ -250,14 +250,14 @@ def main():
     rag_obj = CoalLLMRAG(llm, retrieval_num=3, rerank_flag=False, select_num=3)
     # print('load rag_obj.')
 
-    st.title('💬 coal QA')
+    # st.title('💬 coal QA')
 
     with st.sidebar:
         is_arg = st.radio(
             "Whether use RAG for generate",
             ("Yes", "No")
         )
-        # st.image(r"images/coal_mine_safety.png")
+    st.image(r"images/coal_mine_safety.png")
       
     robot_avator = "images/robot.jpg"
     st.title('💬 煤矿安全大模型--矿途智护者')
@@ -300,7 +300,7 @@ def main():
             'content': prompt,
         })
 
-        with st.chat_message('robot'):
+        with st.chat_message('robot',avator=robot_avator):
             message_placeholder = st.empty()
             for cur_response in generate_interactive(
                     model=model,
@@ -316,6 +316,7 @@ def main():
         st.session_state.messages.append({
             'role': 'robot',
             'content': cur_response,  # pylint: disable=undefined-loop-variable
+             "avatar": robot_avator,
         })
         torch.cuda.empty_cache()
 
