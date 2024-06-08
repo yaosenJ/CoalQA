@@ -12,8 +12,6 @@ embedding_model_name = 'BAAI/bge-small-zh-v1.5'
 rerank_path = os.path.join(model_dir, 'rerank_model')  	        	  # embedding
 rerank_model_name = 'BAAI/bge-reranker-large'
 
-llm_path = os.path.join(model_dir, 'pythia-14m')                    # llm
-
 # data
 data_dir = os.path.join(base_dir, 'data')                           # data
 knowledge_json_path = os.path.join(data_dir, 'knowledge.json')      # json
@@ -38,9 +36,6 @@ vector_db_dir = os.path.join(cloud_vector_db_dir, 'vector_db')
 # retrieval num： 代表从 vector db 中检索多少 documents。（retrieval num 应该大于等于 select num）
 select_num = 3
 retrieval_num = 3
-
-# LLM key
-glm_key = ''
 
 # prompt
 prompt_template = """
