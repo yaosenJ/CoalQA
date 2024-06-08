@@ -100,6 +100,10 @@ pip install -r requirements.txt
 - 详细查看模型微调，请查阅[模型微调指南](https://github.com/yaosenJ/CoalQA/blob/main/finetune/README.md)
 
 <h3 id="2-4"> RAG </h3>
+
+- 检索增强生成RAG相关细节，详见：[RAG详细指南](https://github.com/yaosenJ/CoalQA/tree/main/rag#readme)
+- 使用Neo4j和Langchain集成非结构化和图知识增强煤矿事故QA,见(CoalMineLLM-InternLM2-Chat-1_8B版本)
+
 <h3 id="2-5"> 部署 </h3>
 
 - 本地部署：详见[本地部署说明](web_app/README.md)
