@@ -13,8 +13,9 @@ from transformers.generation.utils import (LogitsProcessorList,
 from transformers.utils import logging
 
 from transformers import AutoTokenizer, AutoModelForCausalLM  # isort: skip
-from main import setup_model_and_tokenizer
-from pipeline import CoalLLMRAG
+
+from rag.main import setup_model_and_tokenizer
+from rag.pipeline import CoalLLMRAG
 logger = logging.get_logger(__name__)
 
 
