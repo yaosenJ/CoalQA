@@ -14,6 +14,9 @@ from transformers.utils import logging
 
 from transformers import AutoTokenizer, AutoModelForCausalLM  # isort: skip
 
+from rag.main import setup_model_and_tokenizer
+from rag.pipeline import CoalLLMRAG
+
 logger = logging.get_logger(__name__)
 
 
@@ -174,13 +177,18 @@ def load_model():
         #os.system(f'git clone https://code.openxlab.org.cn/milowang/CoalMineLLM_InternLM2-Chat-7B-4bit.git {base_path}')
         os.system(f'cd {base_path} && git lfs pull')
 
+    model, tokenizer, llm = setup_model_and_tokenizer(base_path, generation_config)
+    return model, tokenizer, llm
+  
+@st.cache_resource
+def load_multi_query_model(): 
+    base_path = r'./CoalMineLLM_InternLM2'
     model = (AutoModelForCausalLM.from_pretrained(base_path,
                                                   trust_remote_code=True).to(
                                                       torch.bfloat16).cuda())
     tokenizer = AutoTokenizer.from_pretrained(base_path,
                                               trust_remote_code=True)
     return model, tokenizer
-
 
 def prepare_generation_config():
     with st.sidebar:
@@ -205,9 +213,10 @@ cur_query_prompt = '<|im_start|>user\n{user}<|im_end|>\n\
     <|im_start|>assistant\n'
 
 
-def combine_history(prompt):
+def combine_history(prompt, retrieval_content=''):
     messages = st.session_state.messages
-    meta_instruction = ('')
+    prompt = f"你需要根据以下检索到的专业知识:`{retrieval_content}`。从一个煤矿安全专家的专业角度来回答后续提问：{prompt}"
+    meta_instruction = ('你是A100换你AD钙奶团队研发的煤矿安全领域大语言模型。旨在为煤矿企业负责人、安全管理人员、矿工等用户提供关于煤矿事故、煤矿安全规程规章制度及相关安全知识的智能问答服务。')
     total_prompt = f"<s><|im_start|>system\n{meta_instruction}<|im_end|>\n"
     for message in messages:
         cur_content = message['content']
