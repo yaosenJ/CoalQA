@@ -139,7 +139,6 @@ pip install -r requirements.txt
 
 [Hao813](https://github.com/Hao813): 负责数据收集、架构图绘制
 
-<img src="https://ghchart.rshah.org/yaosenJ" alt="yaosenJ's Github chart" />
 
 <h2 id="5">💡 致谢</h2>
 
