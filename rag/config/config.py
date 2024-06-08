@@ -3,7 +3,6 @@ import os
 cur_dir = os.path.dirname(os.path.abspath(__file__))                # config
 src_dir = os.path.dirname(cur_dir)                                  # src
 base_dir = os.path.dirname(src_dir)                          # base
-# model_repo = 'ajupyter/EmoLLM_aiwei'
 
 # model
 model_dir = os.path.join(base_dir, 'model')                         # model
