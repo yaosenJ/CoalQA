@@ -190,6 +190,17 @@ def load_multi_query_model():
                                               trust_remote_code=True)
     return model, tokenizer
 
+def get_similar_query(chat_model, chat_tokenizer, query, num=1):
+    results = []
+    for _ in range(0, num):
+        # 大模型进行改写，记得do_sample设置成true，不然会输出同一个句子，缺少多样性
+        response, _ = chat_model.chat(chat_tokenizer, query + "。你是一个改写句子的专家，注意：现在你的任务是改写/重写句子！！！！！，所以请你用另一种表达方式改写上述话。", history=[], do_sample=True, num_beams=3,
+                                      temperature=0.8)
+        results.append(response)
+    return results
+
+
+
 def prepare_generation_config():
     with st.sidebar:
         max_length = st.slider('Max Length',
@@ -230,17 +241,21 @@ def combine_history(prompt, retrieval_content=''):
     total_prompt = total_prompt + cur_query_prompt.format(user=prompt)
     return total_prompt
 
-def use_rag(text):
+def use_rag(rag_obj, prompt):
     # TODO: RAG function
-    return text
+    prompts = [prompt]
+    retrieval_content = rag_obj.get_retrieval_content(prompts)
+    return retrieval_content
 
 def main():
-    # torch.cuda.empty_cache()
+    generation_config = prepare_generation_config()
     print('load model begin.')
-    model, tokenizer = load_model()
+    model, tokenizer, llm = load_model(generation_config)
     print('load model end.')
+    rag_obj = CoalLLMRAG(llm, retrieval_num=3, rerank_flag=False, select_num=3)
+    # print('load rag_obj.')
 
-    robot_avator = 'images/robot.jpg'
+    st.title('💬 coal QA')
 
     with st.sidebar:
         is_arg = st.radio(
@@ -248,11 +263,10 @@ def main():
             ("Yes", "No")
         )
         st.image(r"images/coal_mine_safety.png")
-
+      
+    robot_avator = "images/robot.jpg"
     st.title('💬 煤矿安全大模型--矿途智护者')
     
-
-    generation_config = prepare_generation_config()
 
     # Initialize chat history
     if 'messages' not in st.session_state:
@@ -266,14 +280,25 @@ def main():
     # Accept user input
     if prompt := st.chat_input('What is up?'):
         # Display user message in chat message container
+
+        # print('multi_query')
+        # query_model, query_tokenizer = load_multi_query_model()
+        # query_model.cuda()
+        # similar_prompts = get_similar_query(query_model, query_tokenizer, prompt)
+        # query_model.cpu()
+        # prompts = [prompt] + similar_prompts
+        
         with st.chat_message('user'):
             st.markdown(prompt)
 
-        # add rag function
-        if is_arg=="Yes":
-            prompt = use_rag(prompt)
+        
 
-        real_prompt = combine_history(prompt)
+        if is_arg=="Yes":
+            retrieval_content = use_rag(rag_obj, prompt)
+        
+            real_prompt = combine_history(prompt, retrieval_content)
+        else:
+            real_prompt = combine_history(prompt)
         # Add user message to chat history
         st.session_state.messages.append({
             'role': 'user',
