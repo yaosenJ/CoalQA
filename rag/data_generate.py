@@ -5,7 +5,7 @@ import numpy as np
 
 from loguru import logger
 from langchain_community.vectorstores import FAISS
-from config.config import (
+from rag.config.config import (
     embedding_path,
     embedding_model_name,
     doc_dir, qa_dir,
@@ -17,13 +17,14 @@ from config.config import (
     chunk_size,
     chunk_overlap
 )
+from rag.pdf_read import FileOperation
+
 from langchain.embeddings import HuggingFaceBgeEmbeddings
 from langchain_community.document_loaders import DirectoryLoader, TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.documents.base import Document
 from FlagEmbedding import FlagReranker
 
-from pdf_read import FileOperation
 class Data_process():
 
     def __init__(self):
