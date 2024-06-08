@@ -102,7 +102,7 @@ pip install -r requirements.txt
 <h3 id="2-4"> RAG </h3>
 
 - 检索增强生成RAG相关细节，详见：[RAG详细指南](https://github.com/yaosenJ/CoalQA/tree/main/rag#readme)
-- 使用Neo4j和Langchain集成非结构化和图知识增强煤矿事故QA，见[CoalMineLLM-InternLM2-Chat-1_8B版][https://github.com/yaosenJ/CoalQA/blob/main/demo/CoalMineLLM-InternLM2_Chat-1_8B-integrated-qa-neo4j-langchain.ipynb]
+- 使用Neo4j和Langchain集成非结构化和图知识增强煤矿事故QA，见[CoalMineLLM-InternLM2-Chat-1_8B版](https://github.com/yaosenJ/CoalQA/blob/main/demo/CoalMineLLM-InternLM2_Chat-1_8B-integrated-qa-neo4j-langchain.ipynb)
 
 <h3 id="2-5"> 部署 </h3>
 
