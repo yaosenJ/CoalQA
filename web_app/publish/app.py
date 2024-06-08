@@ -255,7 +255,7 @@ def main():
     rag_obj = CoalLLMRAG(llm, retrieval_num=3, rerank_flag=False, select_num=3)
     # print('load rag_obj.')
 
-    st.title('💬 coal QA')
+    # st.title('💬 coal QA')
 
     with st.sidebar:
         is_arg = st.radio(
@@ -321,6 +321,7 @@ def main():
         st.session_state.messages.append({
             'role': 'robot',
             'content': cur_response,  # pylint: disable=undefined-loop-variable
+            "avatar": robot_avator,
         })
         torch.cuda.empty_cache()
 
