@@ -1,4 +1,3 @@
-from pipeline import CoalLLMRAG
 # from util.llm import get_glm
 from loguru import logger
 import torch
@@ -11,9 +10,10 @@ from transformers import PreTrainedTokenizerFast, StoppingCriteriaList
 from transformers import (AutoModel, AutoModelForCausalLM, AutoTokenizer,
                           BitsAndBytesConfig, CLIPImageProcessor,
                           CLIPVisionModel, GenerationConfig)
-from stop_criteria import StopWordStoppingCriteria
-from config.config import prompt_template 
-from CoalLLM import CoalLLM
+from rag.pipeline import CoalLLMRAG
+from rag.stop_criteria import StopWordStoppingCriteria
+from rag.config.config import prompt_template 
+from rag.CoalLLM import CoalLLM
 TORCH_DTYPE_MAP = dict(
     fp16=torch.float16, bf16=torch.bfloat16, fp32=torch.float32, auto='auto')
 '''
