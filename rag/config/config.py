@@ -2,7 +2,7 @@ import os
 
 cur_dir = os.path.dirname(os.path.abspath(__file__))                # config
 src_dir = os.path.dirname(cur_dir)                                  # src
-base_dir = '/root/rag'                                # base
+base_dir = os.path.dirname(src_dir)                          # base
 # model_repo = 'ajupyter/EmoLLM_aiwei'
 
 # model
