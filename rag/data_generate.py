@@ -55,13 +55,24 @@ class Data_process():
             except Exception as e:
                 logger.error(f'Failed to load embedding model from {embedding_model_path}')
         try:
-            embeddings = HuggingFaceBgeEmbeddings(
-                model_name=model_name,
-                model_kwargs={'device': device},
-                encode_kwargs={'normalize_embeddings': normalize_embeddings})
-            logger.info('Embedding model loaded.')    
-            with open(embedding_model_path, 'wb') as file:
-                pickle.dump(embeddings, file)
+            # embeddings = HuggingFaceBgeEmbeddings(
+            #     model_name=model_name,
+            #     model_kwargs={'device': device},
+            #     encode_kwargs={'normalize_embeddings': normalize_embeddings})
+            # logger.info('Embedding model loaded.')
+            # with open(embedding_model_path, 'wb') as file:
+            #     pickle.dump(embeddings, file)
+            os.system('apt install git')
+            os.system('apt install git-lfs')
+            #os.system(f'git clone https://code.openxlab.org.cn/viper/CoalMineLLM_InternLM2-Chat-1_8B.git {base_path}')
+            os.system(f'git clone https://code.openxlab.org.cn/answer-qzd/bge_small_1.5.git {embedding_path}')
+            #os.system(f'git clone https://code.openxlab.org.cn/milowang/CoalMineLLM_InternLM2-Chat-7B-4bit.git {base_path}')
+            os.system(f'cd {embedding_path} && git lfs pull')
+            os.system(f'rm -rf .gitattributes')
+
+            with open(embedding_model_path , 'rb') as f:
+                embeddings = pickle.load(f)
+                logger.info('Embedding model loaded.')
         except Exception as e:
             logger.error(f'Failed to load embedding model: {e}')
             return None
@@ -95,10 +106,17 @@ class Data_process():
             except Exception as e:
                 logger.error(f'Failed to load embedding model from {rerank_model_path}') 
         try:
-            reranker_model = FlagReranker(model_name, use_fp16=True)
-            logger.info('Rerank model loaded.')
-            with open(rerank_model_path, 'wb') as file:
-                pickle.dump(reranker_model, file)
+            os.system('apt install git')
+            os.system('apt install git-lfs')
+            #os.system(f'git clone https://code.openxlab.org.cn/viper/CoalMineLLM_InternLM2-Chat-1_8B.git {base_path}')
+            os.system(f'git clone https://code.openxlab.org.cn/answer-qzd/bge_rerank.git {rerank_path}')
+            #os.system(f'git clone https://code.openxlab.org.cn/milowang/CoalMineLLM_InternLM2-Chat-7B-4bit.git {base_path}')
+            os.system(f'cd {rerank_path} && git lfs pull')
+
+            with open(rerank_model_path , 'rb') as f:
+                reranker_model = pickle.load(f)
+                logger.info('Rerank model loaded.')
+                
         except Exception as e:
             logger.error(f'Failed to load rerank model: {e}')
             raise
