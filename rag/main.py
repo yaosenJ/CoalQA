@@ -237,7 +237,7 @@ if __name__ == "__main__":
 
         else:
             prompts = [prompt]
-        rag_obj = CoalLLMRAG(llm, retrieval_num=4, rerank_flag=False, select_num=2)
+        rag_obj = CoalLLMRAG(llm, retrieval_num=3, rerank_flag=False, select_num=3)
 
 
         res = rag_obj.main([query])
