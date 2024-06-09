@@ -235,7 +235,7 @@ def main():
         )
         st.image(r"images/coal_mine_safety.png")
       
-    robot_avator = "images/robot.jpg"
+    robot_avator = r"images/robot.jpg"
     st.title('💬 煤矿安全大模型--矿途智护者')
     
 
