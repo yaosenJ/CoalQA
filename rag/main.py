@@ -204,19 +204,8 @@ def clean_memory():
 #     print("Robot:", cur_response)
 
 if __name__ == "__main__":
-    # model = get_glm()
-
     args = parse_args()
 
-    """
-    输入:
-        model_name='glm-4',
-        api_base="https://open.bigmodel.cn/api/paas/v4",
-        temprature=0.7,
-        streaming=False,
-    输出：
-        LLM Model
-    """
     def get_input():
         """Helper function for getting input from users."""
         sentinel = ''  # ends when this string is seen
