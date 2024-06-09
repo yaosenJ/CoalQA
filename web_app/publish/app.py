@@ -170,7 +170,7 @@ def on_btn_click():
 
 
 @st.cache_resource
-def load_model():
+def load_model(generation_config):
     base_path = './CoalMineLLM_InternLM2'
     if not os.path.exists(base_path):
         os.system('apt install git')
