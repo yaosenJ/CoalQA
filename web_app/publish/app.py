@@ -15,7 +15,7 @@ from transformers.utils import logging
 from transformers import AutoTokenizer, AutoModelForCausalLM  # isort: skip
 
 import sys
-sys.path.append('/path/to/my_module/CoalQA') #注意这里/path/to/my_module换成你下载CoalQA仓库的父目录路径
+sys.path.append('/home/xlab-app-center/CoalQA') #注意这里/path/to/my_module换成你下载CoalQA仓库的父目录路径
 
 from rag.main import setup_model_and_tokenizer
 from rag.pipeline import CoalLLMRAG
