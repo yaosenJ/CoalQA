@@ -23,6 +23,7 @@
 | 对话模型 | InternLM2-Chat-7B  |CoalMineLLM_InternLM2-Chat-7B      | V1.0 | [OpenXLab](https://openxlab.org.cn/models/detail/viper/CoalMineLLM_InternLM2-Chat-7B)|QLora|
 | 对话模型 | InternLM2-Math-7B  |CoalMineLLM_InternLM2-Math-7B      | V1.0 | [OpenXLab](https://openxlab.org.cn/models/detail/viper/CoalMineLLM_InternLM2-Math-7B)|QLora|
 | 对话模型 | InternLM2-Chat-20B |CoalMineLLM_InternLM2-Chat-20B     | V1.0 | [OpenXLab](https://openxlab.org.cn/models/detail/viper/CoalMineLLM_InternLM2-Chat-20B)|QLora|
+| 对话模型 | InternLM2-Chat-1_8B|CoalMineLLM_InternLM2-Chat-1_8B-full    | V1.0 | [OpenXLab](https://openxlab.org.cn/models/detail/viper/CoalMineLLM_InternLM2-Chat-1_8B-full)|全参微调|
 
 ## 📍 架构图
 
