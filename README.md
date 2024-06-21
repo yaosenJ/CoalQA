@@ -24,6 +24,7 @@
 | 对话模型 | InternLM2-Math-7B  |CoalMineLLM_InternLM2-Math-7B      | V1.0 | [OpenXLab](https://openxlab.org.cn/models/detail/viper/CoalMineLLM_InternLM2-Math-7B)|QLora|
 | 对话模型 | InternLM2-Chat-20B |CoalMineLLM_InternLM2-Chat-20B     | V1.0 | [OpenXLab](https://openxlab.org.cn/models/detail/viper/CoalMineLLM_InternLM2-Chat-20B)|QLora|
 | 对话模型 | InternLM2-Chat-1_8B|CoalMineLLM_InternLM2-Chat-1_8B-full    | V1.0 | [OpenXLab](https://openxlab.org.cn/models/detail/viper/CoalMineLLM_InternLM2-Chat-1_8B-full)|全参微调|
+| 对话模型 | CoalMineLLM_InternLM2-Chat-7B  |CoalMineLLM_InternLM2-Chat-7B-4bit      | V1.0 | [OpenXLab](https://openxlab.org.cn/models/detail/viper/CoalMineLLM_InternLM2-Chat-7B-4bit)|W4A16量化|
 
 ## 📍 架构图
 
@@ -37,6 +38,7 @@
 </p>
 
 ## 📬 NEWS
+- \[**2024/06/05**\] 发布项目解说以及演示视频[项目B站视频](https://www.bilibili.com/video/BV1k7421R7qc)。
 - \[**2024/06/05**\] CoalMineLLM_InternLM2-Chat-1_8V1.0版已部署上线[https://openxlab.org.cn/apps/detail/milowang/CoalQAv1](https://openxlab.org.cn/apps/detail/milowang/CoalQAv1)。
 - \[**2024/06/03**\] 发布CoalMineLLM_InternLM2-Chat-20B模型到OpenXLab。
 - \[**2024/06/01**\] 发布CoalMineLLM_InternLM2-Chat-1_8B、CoalMineLLM_InternLM2-Math-7B模型到OpenXLab。
