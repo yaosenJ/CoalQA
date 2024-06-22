@@ -128,9 +128,13 @@ pip install -r requirements.txt
     <img src="https://github.com/yaosenJ/CoalQA/blob/main/imgs/%E4%BA%8B%E6%95%85%E6%9F%A5%E8%AF%A2.png?raw=true" width="800" height="400"/>
     <br>
     <br>
-    <img src="https://github.com/yaosenJ/CoalQA/blob/main/imgs/%E4%BA%8B%E6%95%85%E7%B1%BB%E5%9E%8B%E9%97%AE%E7%AD%941.png?raw=true" width="800" height="400"/>
+    <img src="https://github.com/yaosenJ/CoalQA/blob/main/imgs/%E4%BA%8B%E6%95%85%E7%B1%BB%E5%9E%8B%E9%97%AE%E7%AD%941.png?raw=true" width="800" height="500"/>
+    <br>
+    <br>
+    <img src="https://github.com/yaosenJ/CoalQA/blob/main/imgs/%E4%BA%8B%E6%95%85%E7%B1%BB%E5%9E%8B%E9%97%AE%E7%AD%942.png?raw=true" width="800" height="500"/>
     <br>
 </p>
+
 
 <h2 id="4"> 人员贡献 </h2>
 
