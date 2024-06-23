@@ -37,3 +37,4 @@ cd CoalQA/finetune
 python download_model.py
 ```
 ## 开始模型微调
+见：https://github.com/yaosenJ/CoalQA/blob/87e20f69ac4996923336c50bb56b9707d62149d1/finetune/README.md
