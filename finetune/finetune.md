@@ -1,4 +1,4 @@
-# internlm2微调
+# Internlm2微调
 
 ## 环境配置
 
