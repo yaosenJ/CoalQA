@@ -28,7 +28,7 @@ TORCH_DTYPE_MAP = dict(
 def parse_args():
     parser = argparse.ArgumentParser(description='Chat with a HF model')
     parser.add_argument(
-        'model_name_or_path', default='/group_share/internlm2_chat_7b_qlora_4000', help='Hugging Face model name or path')
+        '--model_name_or_path', default='/group_share/internlm2_chat_7b_qlora_4000', help='Hugging Face model name or path')
     parser.add_argument(
         '--multi_query', default=False, help='whether to enable multi_query')
     adapter_group = parser.add_mutually_exclusive_group()
